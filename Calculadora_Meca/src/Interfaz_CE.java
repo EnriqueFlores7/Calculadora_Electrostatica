@@ -130,7 +130,7 @@ public class Interfaz_CE extends JFrame implements ActionListener {
         fun_Campo.addActionListener(this);
         menu3.add(fun_Campo);
 
-        fun_Gauss = new JMenuItem("Ley de Gauss");
+        fun_Gauss = new JMenuItem("Potencial Electrico");
         fun_Gauss.addActionListener(this);
         menu3.add(fun_Gauss);
     }
@@ -185,7 +185,7 @@ public class Interfaz_CE extends JFrame implements ActionListener {
             abrir.setVisible(true);
             this.setVisible(false);
         }else if (e.getSource()==fun_Gauss) {
-            Interfaz_Gauss abrir = new Interfaz_Gauss();
+            Interfaz_Potencia_Electrico abrir = new Interfaz_Potencia_Electrico();
             abrir.setVisible(true);
             this.setVisible(false);
         }else if  (e.getSource() == btn_la_magnitud_e){
