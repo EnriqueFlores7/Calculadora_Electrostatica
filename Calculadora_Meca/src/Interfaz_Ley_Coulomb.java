@@ -195,20 +195,23 @@ public class Interfaz_Ley_Coulomb extends JFrame implements ActionListener {
                 // System.out.println("Cargas son iguales");
                 fuerza_electrica = Double.parseDouble(txt_fuerza_electrica.getText());
                 distancia = Double.parseDouble(txt_distancia.getText());
-                eti8.setText(String.valueOf(ley_de_coulomb.Carga_electrica_q1_calculo(fuerza_electrica, distancia)));
+                eti8.setText(
+                    String.valueOf(ley_de_coulomb.Carga_electrica_q1_calculo(fuerza_electrica, distancia)));
             } else {
                 // System.out.println("Cargas no iguales");
                 fuerza_electrica = Double.parseDouble(txt_fuerza_electrica.getText());
                 distancia = Double.parseDouble(txt_distancia.getText());
                 carga_electricaq2 = Double.parseDouble(txt_carga_electricaq2.getText());
-                eti8.setText(String.valueOf(ley_de_coulomb.CargaCalculo(fuerza_electrica, carga_electricaq2, distancia)));
+                eti8.setText(
+                    String.valueOf(ley_de_coulomb.CargaCalculo(fuerza_electrica, carga_electricaq2, distancia)));
             }
         } else if (e.getSource() == btn_carga_electricaq2) {
             if (txt_carga_electricaq1.getText().equals("") && txt_carga_electricaq2.getText().equals("")) {
                 // System.out.println("Cargas son iguales");
                 fuerza_electrica = Double.parseDouble(txt_fuerza_electrica.getText());
                 distancia = Double.parseDouble(txt_distancia.getText());
-                eti8.setText(String.valueOf(ley_de_coulomb.Carga_electrica_q1_calculo(fuerza_electrica, distancia)));
+                eti8.setText(
+                    String.valueOf(ley_de_coulomb.Carga_electrica_q1_calculo(fuerza_electrica, distancia)));
             } else {
                 fuerza_electrica = Double.parseDouble(txt_fuerza_electrica.getText());
                 distancia = Double.parseDouble(txt_distancia.getText());
