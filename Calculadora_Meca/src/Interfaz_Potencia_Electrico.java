@@ -119,7 +119,7 @@ public class Interfaz_Potencia_Electrico extends JFrame implements ActionListene
         btn_potencial_v1.addActionListener(this);
         panel.add(btn_potencial_v1);
 
-        btn_potencial_v2.setText("Potnecia de varias cargas");
+        btn_potencial_v2.setText("Potencia de varias cargas");
         btn_potencial_v2.setBounds(230, 110, 190, 30);
         btn_potencial_v2.setBackground(Color.lightGray);
         btn_potencial_v2.addActionListener(this);
