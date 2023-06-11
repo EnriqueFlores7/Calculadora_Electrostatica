@@ -183,47 +183,66 @@ public class Interfaz_Ley_Coulomb extends JFrame implements ActionListener {
             abrir.setVisible(true);
             this.setVisible(false);
         } else if (e.getSource() == btn_fuerza_electrica) {
+            try{
             carga_electricaq1 = Double.parseDouble(txt_carga_electricaq1.getText());
             carga_electricaq2 = Double.parseDouble(txt_carga_electricaq2.getText());
             distancia = Double.parseDouble(txt_distancia.getText());
-            eti8.setText(String.valueOf(
-                    ley_de_coulomb.Fuerza_Electrica_calculo(carga_electricaq1, carga_electricaq2, distancia)));
+            eti8.setText(String.valueOf(ley_de_coulomb.Fuerza_Electrica_calculo(carga_electricaq1, carga_electricaq2, distancia)));
+            }catch(Exception ex){
+                JOptionPane.showMessageDialog(this, "¡Se produjo un error!", "Error", JOptionPane.ERROR_MESSAGE, null);
+            }
         } else if (e.getSource() == btn_carga_electricaq1) {
             // Para cuando las cargas son iguales a cero
             if (txt_carga_electricaq1.getText().equals("") && txt_carga_electricaq2.getText().equals("")) {
                 // System.out.println("Cargas son iguales");
+                try{
                 fuerza_electrica = Double.parseDouble(txt_fuerza_electrica.getText());
                 distancia = Double.parseDouble(txt_distancia.getText());
-                eti8.setText(
-                    String.valueOf(ley_de_coulomb.Carga_electrica_q1_calculo(fuerza_electrica, distancia)));
+                eti8.setText(String.valueOf(ley_de_coulomb.Carga_electrica_q1_calculo(fuerza_electrica, distancia)));
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(this, "¡Se produjo un error!", "Error", JOptionPane.ERROR_MESSAGE, null);
+                }
             } else {
                 // System.out.println("Cargas no iguales");
+                try{
                 fuerza_electrica = Double.parseDouble(txt_fuerza_electrica.getText());
                 distancia = Double.parseDouble(txt_distancia.getText());
                 carga_electricaq2 = Double.parseDouble(txt_carga_electricaq2.getText());
-                eti8.setText(
-                    String.valueOf(ley_de_coulomb.CargaCalculo(fuerza_electrica, carga_electricaq2, distancia)));
+                eti8.setText(String.valueOf(ley_de_coulomb.CargaCalculo(fuerza_electrica, carga_electricaq2, distancia)));
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(this, "¡Se produjo un error!", "Error", JOptionPane.ERROR_MESSAGE, null);
+                }
             }
         } else if (e.getSource() == btn_carga_electricaq2) {
             if (txt_carga_electricaq1.getText().equals("") && txt_carga_electricaq2.getText().equals("")) {
                 // System.out.println("Cargas son iguales");
+                try{
                 fuerza_electrica = Double.parseDouble(txt_fuerza_electrica.getText());
                 distancia = Double.parseDouble(txt_distancia.getText());
                 eti8.setText(
                     String.valueOf(ley_de_coulomb.Carga_electrica_q1_calculo(fuerza_electrica, distancia)));
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(this, "¡Se produjo un error!", "Error", JOptionPane.ERROR_MESSAGE, null);
+                }
             } else {
+                try{
                 fuerza_electrica = Double.parseDouble(txt_fuerza_electrica.getText());
                 distancia = Double.parseDouble(txt_distancia.getText());
                 carga_electricaq1 = Double.parseDouble(txt_carga_electricaq1.getText());
-                eti8.setText(
-                        String.valueOf(ley_de_coulomb.CargaCalculo(fuerza_electrica, carga_electricaq1, distancia)));
+                eti8.setText(String.valueOf(ley_de_coulomb.CargaCalculo(fuerza_electrica, carga_electricaq1, distancia)));
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(this, "¡Se produjo un error!", "Error", JOptionPane.ERROR_MESSAGE, null);
+                }
             }
         } else if (e.getSource() == btn_distancia) {
+            try {
             fuerza_electrica = Double.parseDouble(txt_fuerza_electrica.getText());
             carga_electricaq1 = Double.parseDouble(txt_carga_electricaq1.getText());
             carga_electricaq2 = Double.parseDouble(txt_carga_electricaq2.getText());
-            eti8.setText(
-                    String.valueOf(ley_de_coulomb.Distancia(fuerza_electrica, carga_electricaq1, carga_electricaq2)));
+            eti8.setText(String.valueOf(ley_de_coulomb.Distancia(fuerza_electrica, carga_electricaq1, carga_electricaq2)));
+            }catch(Exception ex){
+                JOptionPane.showMessageDialog(this, "¡Se produjo un error!", "Error", JOptionPane.ERROR_MESSAGE, null);
+            }
         }
     }
 }
