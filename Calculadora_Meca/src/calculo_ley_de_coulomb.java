@@ -1,11 +1,11 @@
-public class ley_de_coulomb {
+public class calculo_ley_de_coulomb {
     double k = 8.89*Math.pow(10, 9); //Constante de Coulomb
     private double Fe; //Fuerza electrica
     private double q1; //Carga 1
     private double q2; //Carga 2
     private double r; //Es la distancia entre las cargas
 
-    public ley_de_coulomb(double Fe, double q1, double q2, double r){
+    public calculo_ley_de_coulomb(double Fe, double q1, double q2, double r){
         this.Fe = Fe;
         this.Fe = q1;
         this.q2 = q2;

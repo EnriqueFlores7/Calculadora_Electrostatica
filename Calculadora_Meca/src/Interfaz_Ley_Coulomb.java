@@ -37,7 +37,7 @@ public class Interfaz_Ley_Coulomb extends JFrame implements ActionListener {
     double distancia;
     double var1 = 0;
     // Llamamos a la clase
-    ley_de_coulomb ley_de_coulomb = new ley_de_coulomb(fuerza_electrica, carga_electricaq1, carga_electricaq2,distancia);
+    calculo_ley_de_coulomb ley_de_coulomb = new calculo_ley_de_coulomb(fuerza_electrica, carga_electricaq1, carga_electricaq2,distancia);
     // Declaramos las propiedades de la interfas
     public Interfaz_Ley_Coulomb() {
         setTitle("Ley de Coulomb");
