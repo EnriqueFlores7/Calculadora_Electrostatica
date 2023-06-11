@@ -49,7 +49,7 @@ public class calculo_campo_electrico {
     }
     //Para calcular el campo electrico de una carga puntual aislada
     public double campo_electrico_carga_aisalada(double carga_prueba, double distancia){
-        double resultado = 0, paso1 = 0, paso2 = 0;
+        double paso1 = 0, paso2 = 0;
         paso1 = (carga_prueba / Math.pow(distancia, 2));
         paso2 = k * paso1;
         return paso2;
