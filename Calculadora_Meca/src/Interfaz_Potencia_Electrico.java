@@ -111,7 +111,7 @@ public class Interfaz_Potencia_Electrico extends JFrame implements ActionListene
     }
     public void botones(){
         btn_potencial_v1.setText("Potencial de una q puntual");
-        btn_potencial_v1.setBounds(20, 210, 190, 30);
+        btn_potencial_v1.setBounds(20, 110, 190, 30);
         btn_potencial_v1.setBackground(Color.lightGray);
         btn_potencial_v1.addActionListener(this);
         panel.add(btn_potencial_v1);
