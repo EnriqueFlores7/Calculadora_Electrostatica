@@ -38,7 +38,7 @@ public class Interfaz_Potencia_Electrico extends JFrame implements ActionListene
 
     public Interfaz_Potencia_Electrico() {
         setTitle("Potencial Electrico");
-        setSize(600, 340);
+        setSize(600, 240);
         setLocationRelativeTo(null);
         setResizable(false);
         iniciarcomponentes();
@@ -115,6 +115,12 @@ public class Interfaz_Potencia_Electrico extends JFrame implements ActionListene
         btn_potencial_v1.setBackground(Color.lightGray);
         btn_potencial_v1.addActionListener(this);
         panel.add(btn_potencial_v1);
+
+        btn_potencial_v2.setText("Potnecia de varias cargas");
+        btn_potencial_v2.setBounds(230, 110, 190, 30);
+        btn_potencial_v2.setBackground(Color.lightGray);
+        btn_potencial_v2.addActionListener(this);
+        panel.add(btn_potencial_v2);
     }
     public void cajas_de_texto(){
         txt_carga_potencia.setBounds(170, 3, 200, 20);
