@@ -152,10 +152,13 @@ public class Interfaz_Potencia_Electrico extends JFrame implements ActionListene
             abrir.setVisible(true);
             this.setVisible(false);
         } else if (e.getSource() == btn_potencial_v1) {
+            try{
             carga_puntual_var = Double.parseDouble(txt_carga_potencia.getText());
             distancia = Double.parseDouble(txt_distancia.getText());
-            eti5.setText(
-                    String.valueOf(calculo_potencial_electrico.Calculo_V_qpuntual(carga_puntual_var, distancia)));
+            eti5.setText(String.valueOf(calculo_potencial_electrico.Calculo_V_qpuntual(carga_puntual_var, distancia)));
+            }catch(Exception ex){
+                JOptionPane.showMessageDialog(this, "¡Se produjo un error!", "Error", JOptionPane.ERROR_MESSAGE, null);
+            }
         }
     }
 }
