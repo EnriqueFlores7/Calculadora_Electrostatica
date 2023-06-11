@@ -19,7 +19,6 @@ public class Interfaz_CE extends JFrame implements ActionListener {
     //Declaramos los elementos del Menu de barra
     private JMenuBar menuBar;
     private JMenu menu2, menu3;
-    private JMenuItem btn_Teoria_Coulomb, btn_Teoria_Campo_E, btn_Teoria_Gauss;
     private JMenuItem fun_Coulomb, fun_Campo, fun_Gauss;
 
     //Declaramos las etiquetas

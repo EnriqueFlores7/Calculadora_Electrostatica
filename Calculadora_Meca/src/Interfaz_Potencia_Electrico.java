@@ -1,24 +1,60 @@
 import javax.swing.*;
+
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Interfaz_Potencia_Electrico extends JFrame implements ActionListener {
+    
+    //Creamos un panel 
+    JPanel panel = new JPanel();
     // Creamos el menu de barra
     private JMenuBar menuBar;
     private JMenu menu2, menu3;
-    private JMenuItem btn_Teoria_Coulomb, btn_Teoria_Campo_E, btn_Teoria_Gauss;
     private JMenuItem fun_Coulomb, fun_Campo, fun_Gauss;
+
+    //Creamos las etiquetas 
+    JLabel eti1 = new JLabel();
+    JLabel eti2 = new JLabel();
+    JLabel eti3 = new JLabel();
+    JLabel eti4 = new JLabel();
+    JLabel eti5 = new JLabel();
+
+    //Creamos las cajas de texto
+    JTextField txt_carga_potencia = new JTextField();
+    JTextField txt_distancia = new JTextField();
+    JTextField txt_potencial_electrico = new JTextField();
+
+    //Creamos los botones
+    JButton btn_potencial_v1 = new JButton();
+    JButton btn_potencial_v2 = new JButton();
+
+    //Para usar la clase
+    double carga_puntual_var = 0;
+    double distancia = 0;
+    double potencia_electrico = 0;
+    calculo_potencial_electrico calculo_potencial_electrico = new calculo_potencial_electrico(carga_puntual_var, distancia, potencia_electrico);
 
     public Interfaz_Potencia_Electrico() {
         setTitle("Potencial Electrico");
-        setSize(700, 340);
+        setSize(600, 340);
         setLocationRelativeTo(null);
         setResizable(false);
         iniciarcomponentes();
     }
 
     public void iniciarcomponentes() {
+        panel();
         menuBarra();
+        etiquetas();
+        cajas_de_texto();
+        botones();
+    }
+
+    public void panel() {
+        this.getContentPane().add(panel);
+        panel.setLayout(null);
     }
 
     public void menuBarra() {
@@ -47,7 +83,49 @@ public class Interfaz_Potencia_Electrico extends JFrame implements ActionListene
         fun_Gauss.addActionListener(this);
         menu3.add(fun_Gauss);
     }
+    public void etiquetas(){
+        eti1.setText("Carga puntual :");
+        eti1.setBounds(20, 0, 500, 30);
+        eti1.setFont(new Font("Arial", 0, 15));
+        panel.add(eti1);
 
+        eti2.setText("Distancia :");
+        eti2.setBounds(20, 35, 500, 30);
+        eti2.setFont(new Font("Arial", 0, 15));
+        panel.add(eti2);
+
+        eti3.setText("Potencial electrico :");
+        eti3.setBounds(20, 65, 500, 30);
+        eti3.setFont(new Font("Arial", 0, 15));
+        panel.add(eti3);
+
+        eti4.setText("Resultado :");
+        eti4.setBounds(380, 0, 500, 15);
+        eti4.setFont(new Font("Arial", 0, 15));
+        panel.add(eti4);
+
+        eti5.setText("0.00");
+        eti5.setBounds(460, 0, 500, 15);
+        eti5.setFont(new Font("Arial", 0, 15));
+        panel.add(eti5);
+    }
+    public void botones(){
+        btn_potencial_v1.setText("Potencial de una q puntual");
+        btn_potencial_v1.setBounds(20, 210, 190, 30);
+        btn_potencial_v1.setBackground(Color.lightGray);
+        btn_potencial_v1.addActionListener(this);
+        panel.add(btn_potencial_v1);
+    }
+    public void cajas_de_texto(){
+        txt_carga_potencia.setBounds(170, 3, 200, 20);
+        panel.add(txt_carga_potencia);
+
+        txt_distancia.setBounds(170, 40, 200, 20);
+        panel.add(txt_distancia);
+
+        txt_potencial_electrico.setBounds(170, 70, 200, 20);
+        panel.add(txt_potencial_electrico);
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == fun_Coulomb) {
@@ -62,6 +140,11 @@ public class Interfaz_Potencia_Electrico extends JFrame implements ActionListene
             Interfaz_Potencia_Electrico abrir = new Interfaz_Potencia_Electrico();
             abrir.setVisible(true);
             this.setVisible(false);
+        }else if (e.getSource() == btn_potencial_v1){
+            carga_puntual_var = Double.parseDouble(txt_carga_potencia.getText());
+            distancia = Double.parseDouble(txt_distancia.getText());
+            eti5.setText(
+                String.valueOf(calculo_potencial_electrico.Calculo_V_qpuntual(carga_puntual_var, distancia)));
         }
     }
 }

@@ -2,13 +2,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.Console;
+
 
 public class Interfaz_Ley_Coulomb extends JFrame implements ActionListener {
     // Creamos el menu de barra
     private JMenuBar menuBar;
     private JMenu menu2, menu3;
-    private JMenuItem btn_Teoria_Coulomb, btn_Teoria_Campo_E, btn_Teoria_Gauss;
     private JMenuItem fun_Coulomb, fun_Campo, fun_Gauss;
     // Declaramos los elementos de la ley de coulomb
     JPanel panel = new JPanel();
