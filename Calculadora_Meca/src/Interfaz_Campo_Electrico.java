@@ -11,6 +11,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.concurrent.ExecutionException;
 
 public class Interfaz_Campo_Electrico extends JFrame implements ActionListener {
     //Declaramos un panel para agregar los elementos
@@ -176,9 +177,9 @@ public class Interfaz_Campo_Electrico extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==fun_Coulomb){
-            Interfaz_Ley_Coulomb abrir = new Interfaz_Ley_Coulomb();
-            abrir.setVisible(true);
-            this.setVisible(false);
+                Interfaz_Ley_Coulomb abrir = new Interfaz_Ley_Coulomb();
+                abrir.setVisible(true);
+                this.setVisible(false);
         }else if(e.getSource()==fun_Campo){
             Interfaz_Campo_Electrico abrir = new Interfaz_Campo_Electrico();
             abrir.setVisible(true);
