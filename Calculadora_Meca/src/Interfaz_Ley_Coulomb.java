@@ -175,7 +175,7 @@ public class Interfaz_Ley_Coulomb extends JFrame implements ActionListener {
             abrir.setVisible(true);
             this.setVisible(false);
         } else if (e.getSource() == fun_Campo) {
-            Interfaz_CE abrir = new Interfaz_CE();
+            Interfaz_Campo_Electrico abrir = new Interfaz_Campo_Electrico();
             abrir.setVisible(true);
             this.setVisible(false);
         } else if (e.getSource() == fun_Gauss) {

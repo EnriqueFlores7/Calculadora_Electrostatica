@@ -133,7 +133,7 @@ public class Interfaz_Potencia_Electrico extends JFrame implements ActionListene
             abrir.setVisible(true);
             this.setVisible(false);
         } else if (e.getSource() == fun_Campo) {
-            Interfaz_CE abrir = new Interfaz_CE();
+            Interfaz_Campo_Electrico abrir = new Interfaz_Campo_Electrico();
             abrir.setVisible(true);
             this.setVisible(false);
         } else if (e.getSource() == fun_Gauss) {
