@@ -4,6 +4,7 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -11,7 +12,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.concurrent.ExecutionException;
+
 
 public class Interfaz_Campo_Electrico extends JFrame implements ActionListener {
     //Declaramos un panel para agregar los elementos
@@ -189,21 +190,37 @@ public class Interfaz_Campo_Electrico extends JFrame implements ActionListener {
             abrir.setVisible(true);
             this.setVisible(false);
         }else if  (e.getSource() == btn_la_magnitud_e){
+            try{
             fuerza_electrica = Double.parseDouble(txt_fuerza_e.getText());
             carga_prueba = Double.parseDouble(txt_carga_p.getText());
             eti9.setText(String.valueOf(calculo_campo_electrico.campo_electrico_sink(fuerza_electrica, carga_prueba)));
+            }catch(Exception ex){
+                JOptionPane.showMessageDialog(this, "¡Se produjo un error!", "Error", JOptionPane.ERROR_MESSAGE, null);
+            }
         }else if (e.getSource() == btn_la_fuerza_e){
+            try{
             campo_electrico = Double.parseDouble(txt_magnitud_e.getText());
             carga_prueba = Double.parseDouble(txt_carga_p.getText());
             eti9.setText(String.valueOf(calculo_campo_electrico.fuerza_electrica_calculo(campo_electrico, carga_prueba)));
+            }catch(Exception ex){
+                JOptionPane.showMessageDialog(this, "¡Se produjo un error!", "Error", JOptionPane.ERROR_MESSAGE, null);
+            }
         }else if(e.getSource() == btn_la_carga_p){
+            try{
             campo_electrico = Double.parseDouble(txt_magnitud_e.getText());
             fuerza_electrica = Double.parseDouble(txt_fuerza_e.getText());
             eti9.setText(String.valueOf(calculo_campo_electrico.carga_prueba_calculo(fuerza_electrica, campo_electrico)));
+            }catch(Exception ex){
+                JOptionPane.showMessageDialog(this, "¡Se produjo un error!", "Error", JOptionPane.ERROR_MESSAGE, null);
+            }
         }else if (e.getSource()==btn_CE_aislada){
+            try{
             carga_prueba = Double.parseDouble(txt_carga_p.getText());
             distancia = Double.parseDouble(txt_distancia.getText());
             eti9.setText(String.valueOf(calculo_campo_electrico.campo_electrico_carga_aisalada(carga_prueba,distancia)));
+            }catch(Exception ex){
+                JOptionPane.showMessageDialog(this, "¡Se produjo un error!", "Error", JOptionPane.ERROR_MESSAGE, null);
+            }
         }
     }
 }
