@@ -27,19 +27,19 @@ public class calculo_campo_electrico {
     }
     //Modificar
     public void setFuerza_electrica(double fuerza_electrica){
-        fuerza_electrica = fuerza_electrica;
+        this.fuerza_electrica = fuerza_electrica;
     }
 
     public void setCarga_prueba(double carga_prueba){
-        carga_prueba = carga_prueba;
+        this.cargas_prueba = carga_prueba;
     }
 
     public void setCampo_electrico(double campo_electrico){
-        campo_electrico = campo_electrico;
+        this.campo_electrico = campo_electrico;
     }
 
     public void setDistancia(double distancia){
-        distancia = distancia;
+        this.distancia = distancia;
     }
     //Para calcular la fuerza electrica sin la constante de Coulomb
     public double campo_electrico_sink(double fuerza_electrica, double carga_prueba){
