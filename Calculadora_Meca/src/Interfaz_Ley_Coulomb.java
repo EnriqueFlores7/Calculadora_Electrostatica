@@ -68,7 +68,7 @@ public class Interfaz_Ley_Coulomb extends JFrame implements ActionListener {
          * Creamos el primer JMenu y lo pasamos como parámetro al JMenuBar mediante el
          * método add
          */
-        menu2 = new JMenu("Teoria");
+        menu2 = new JMenu("Manual");
         menuBar.add(menu2);
         menu3 = new JMenu("Funciones");
         menuBar.add(menu3);
