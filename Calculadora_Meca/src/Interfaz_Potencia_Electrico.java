@@ -96,10 +96,10 @@ public class Interfaz_Potencia_Electrico extends JFrame implements ActionListene
         eti2.setFont(new Font("Arial", 0, 15));
         panel.add(eti2);
 
-        eti3.setText("Potencial electrico :");
+        /*eti3.setText("Potencial electrico :");
         eti3.setBounds(20, 65, 500, 30);
         eti3.setFont(new Font("Arial", 0, 15));
-        panel.add(eti3);
+        panel.add(eti3);*/
 
         eti4.setText("Resultado :");
         eti4.setBounds(380, 0, 500, 15);
@@ -132,9 +132,6 @@ public class Interfaz_Potencia_Electrico extends JFrame implements ActionListene
 
         txt_distancia.setBounds(170, 40, 200, 20);
         panel.add(txt_distancia);
-
-        txt_potencial_electrico.setBounds(170, 70, 200, 20);
-        panel.add(txt_potencial_electrico);
     }
 
     @Override
@@ -159,6 +156,10 @@ public class Interfaz_Potencia_Electrico extends JFrame implements ActionListene
             }catch(Exception ex){
                 JOptionPane.showMessageDialog(this, "¡Se produjo un error!", "Error", JOptionPane.ERROR_MESSAGE, null);
             }
+        }else if(e.getSource() == btn_potencial_v2){
+            Interfaz_varias_cargas abrir = new Interfaz_varias_cargas();
+            abrir.setVisible(true);
+            this.setVisible(false);
         }
     }
 }
