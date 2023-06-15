@@ -54,13 +54,13 @@ public class calculo_ley_de_coulomb {
     //Para cuando las cargas son iguales
     public double Carga_electrica_q1_calculo(double Fe,double r){
         double carga_calculo = 0;
-        carga_calculo = Fe*Math.pow(r, 2) / k;
+        carga_calculo = Fe * Math.pow(r, 2) / k;
         return Math.sqrt(carga_calculo);
     }
     //Para cuando la carga son difrentes
     public double CargaCalculo(double fe, double q2, double distancia){
         double carga_q1 =0;
-        carga_q1 = fe * Math.pow(distancia, 2) / k * q2;
+        carga_q1 = fe * Math.pow(distancia, 2) / (k * q2);
         return carga_q1;
     }
     //Para calcular la distancia
