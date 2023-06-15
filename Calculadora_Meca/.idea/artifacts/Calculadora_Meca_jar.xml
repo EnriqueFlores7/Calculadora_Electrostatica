@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Calculadora_Meca:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Calculadora_Meca_jar</output-path>
+    <root id="archive" name="Calculadora_Meca.jar">
+      <element id="module-output" name="Calculadora_Meca" />
+    </root>
+  </artifact>
+</component>

@@ -2,6 +2,7 @@ public class calculo_varias_cargas {
     double k = 8.89*Math.pow(10, 9);
     private double distancia;
     private double carga_puntual;
+    private double num_cargas;
 
     public calculo_varias_cargas(double distancia, double carga_puntual){
         this.distancia = distancia;
@@ -26,8 +27,9 @@ public class calculo_varias_cargas {
     
     //Potencial electrico para una carga puntual
     public double Calculo_V_qpuntual(double carga_puntual, double distancia){
-        double resultado;
-        resultado = k*(carga_puntual / distancia);
-        return resultado;
-    }
+            double resultado = Double.parseDouble(Interfaz_varias_cargas.eti6.getText()), suma =0;
+            resultado = resultado +(k * (carga_puntual / distancia));
+            suma = resultado + suma;
+            return resultado;
+        }
 }

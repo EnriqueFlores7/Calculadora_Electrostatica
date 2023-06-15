@@ -117,8 +117,9 @@ public class Interfaz_Campo_Electrico extends JFrame implements ActionListener {
         menuBar = new JMenuBar();
         setJMenuBar(menuBar);
         /* Creamos el primer JMenu y lo pasamos como parámetro al JMenuBar mediante el método add */
-        menu2 = new JMenu("Manual");
-        menuBar.add(menu2);
+        /*menu2 = new JMenu("Manual");
+        menuBar.add(menu2); */
+        
         menu3 = new JMenu("Funciones");
         menuBar.add(menu3);
         //Las opciones del menu

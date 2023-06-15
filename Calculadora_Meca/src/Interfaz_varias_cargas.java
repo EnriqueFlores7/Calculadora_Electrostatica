@@ -13,7 +13,7 @@ public class Interfaz_varias_cargas extends JFrame implements ActionListener {
     JLabel eti3 = new JLabel();
     JLabel eti4 = new JLabel();
     JLabel eti5 = new JLabel();
-    JLabel eti6 = new JLabel();
+    static JLabel eti6 = new JLabel();
 
     //Declaramos las cajas de texto
     JTextField num_cargas = new JTextField();
@@ -27,6 +27,7 @@ public class Interfaz_varias_cargas extends JFrame implements ActionListener {
     //Declarar la clase 
     double carga_p;
     double distancia_p;
+    double num_cargas_var;
     calculo_varias_cargas calculo_varias_cargas = new calculo_varias_cargas(distancia_p, carga_p);
 
     public Interfaz_varias_cargas(){
@@ -50,7 +51,7 @@ public class Interfaz_varias_cargas extends JFrame implements ActionListener {
     }
     //Propiedades del las etiquetas
     public void etiquetas_propidades(){
-        eti1.setText("¿Cuantas cargas quieres sumar?:");
+        eti1.setText("Sumatoria de Potencial Electrico");
         eti1.setBounds(20, 0, 500, 30);
         eti1.setFont(new Font("arial",0,15));
         panel.add(eti1);
@@ -83,8 +84,8 @@ public class Interfaz_varias_cargas extends JFrame implements ActionListener {
     
     //Propiedades de las cajas de texto
     public void cajas_propiedades(){
-        num_cargas.setBounds(250, 5, 200, 20);
-        panel.add(num_cargas);
+        /*num_cargas.setBounds(250, 5, 200, 20);
+        panel.add(num_cargas);*/
 
         carga_puntual.setBounds(130, 70, 200,20);
         panel.add(carga_puntual);
