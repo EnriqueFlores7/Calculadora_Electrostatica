@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class Interfaz_Ley_Coulomb extends JFrame implements ActionListener {
     // Creamos el menu de barra
     private JMenuBar menuBar;
-    private JMenu menu2, menu3;
+    private JMenu menu3;
     private JMenuItem fun_Coulomb, fun_Campo, fun_Gauss;
     // Declaramos los elementos de la ley de coulomb
     JPanel panel = new JPanel();

@@ -2,7 +2,6 @@ public class calculo_varias_cargas {
     double k = 8.89*Math.pow(10, 9);
     private double distancia;
     private double carga_puntual;
-    private double num_cargas;
 
     public calculo_varias_cargas(double distancia, double carga_puntual){
         this.distancia = distancia;

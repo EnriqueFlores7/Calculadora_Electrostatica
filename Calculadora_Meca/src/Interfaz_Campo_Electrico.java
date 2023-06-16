@@ -20,7 +20,7 @@ public class Interfaz_Campo_Electrico extends JFrame implements ActionListener {
 
     //Declaramos los elementos del Menu de barra
     private JMenuBar menuBar;
-    private JMenu menu2, menu3;
+    private JMenu menu3;
     private JMenuItem fun_Coulomb, fun_Campo, fun_Gauss;
 
     //Declaramos las etiquetas

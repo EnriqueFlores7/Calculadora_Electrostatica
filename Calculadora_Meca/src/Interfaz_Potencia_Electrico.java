@@ -11,7 +11,7 @@ public class Interfaz_Potencia_Electrico extends JFrame implements ActionListene
     JPanel panel = new JPanel();
     // Creamos el menu de barra
     private JMenuBar menuBar;
-    private JMenu menu2, menu3;
+    private JMenu menu3;
     private JMenuItem fun_Coulomb, fun_Campo, fun_Gauss;
 
     // Creamos las etiquetas
