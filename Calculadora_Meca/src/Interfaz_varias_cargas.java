@@ -31,7 +31,7 @@ public class Interfaz_varias_cargas extends JFrame implements ActionListener {
     calculo_varias_cargas calculo_varias_cargas = new calculo_varias_cargas(distancia_p, carga_p);
 
     public Interfaz_varias_cargas(){
-        setTitle("Suma de cargas");
+        setTitle("Potencial Electrico");
         setSize(520, 340);
         setLocationRelativeTo(null);
         setResizable(false);
